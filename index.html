@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lab2 Personality Test</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <style>
+    #button01{color: #000;
+        }
+    </style>
+    <body>
+        <div id="Stacy">Hello!</div>
+        <input id="input" type="text" placeholder="enter your name" />
+        <button id="button01">enter</button>
+        <p id="output"></p>
+       
+        <div id="intro">Welcome to Stacy's MIN340 Personality test!<br>
+            
+        This simple personality test will let you know what type of person you are based on your horoscope sign.
+            
+            Do you want to try <button id="button02">Yes</button>
+        </div>
+        <div id="options">
+<span id="Question">Pick your favorite color</span><br>
+        <span class="fakeButton" id="answer1"> Red </span><br>   
+        <span class="fakeButton" id="answer2"> Blue </span><br>
+        <span class="fakeButton" id="answer3"> Purple </span><br>
+        <span class="fakeButton" id="answer4"> Yellow </span><br>
+        <span class="fakeButton" id="answer5"> Orange </span><br>
+        <span class="fakeButton" id="answer6"> Green </span><br>
+		</div>
+		<div id="personality1">You are someone who takes charge, is determined, and is a leader!</div>
+		<div id="personality2">You are someone who is detail oriented, precise, and accurate!</div>
+		<div id="personality3">You are someone who is level headed and gets things done!</div>
+		<div id="personality4">You are someone who is kind, loving, and inclusive!</div>
+		<div id="personality5">You are someone who is the center of attention and loves to have fun!</div>
+		<div id="personality6">You are someone who values fairness and has focus on the big picture!</div>
+    </body>
+    <script>
+	 var button = document.querySelector("#button01");
+            button.addEventListener("click", clickHandler, false);
+            button.style.cursor = "pointer";
+            
+            function clickHandler()
+            {
+                var input = document.querySelector("#input");
+                var output = document.querySelector("#output");
+                output.innerHTML = input.value;
+            }
+          var option = document.querySelector("#options");
+		  option.style.display = "none";
+         var button2 = document.querySelector("#button02");
+         button2.addEventListener("click", clickHandler2, false);
+         function clickHandler2()
+         {
+             console.log("Button Clicked");
+			 option.style.display = "block"; 
+         }
+		 
+     
+    var answer1 = document.querySelector("#answer1");
+    answer1.style.display = "block";
+    var answer2 = document.querySelector("#answer2");
+    answer2.style.display = "block";
+	 var answer3 = document.querySelector("#answer3");
+    answer3.style.display = "block";
+	 var answer4 = document.querySelector("#answer4");
+    answer4.style.display = "block";
+	var answer5 = document.querySelector("#answer5");
+    answer5.style.display = "block";
+	 var answer6 = document.querySelector("#answer6");
+    answer6.style.display = "block";
+	
+	var personality1 = document.querySelector("#personality1");
+	personality1.style.display = "none";
+	var personality2 = document.querySelector("#personality2");
+	personality2.style.display = "none";
+	var personality3 = document.querySelector("#personality3");
+	personality3.style.display = "none";
+	var personality4 = document.querySelector("#personality4");
+	personality4.style.display = "none";
+	var personality5 = document.querySelector("#personality5");
+	personality5.style.display = "none";
+	var personality6 = document.querySelector("#personality6");
+	personality6.style.display = "none";
+	
+	answer1.addEventListener("click", clickHandlerA1, false);
+	answer2.addEventListener("click", clickHandlerA2, false);
+	answer3.addEventListener("click", clickHandlerA3, false);
+	answer4.addEventListener("click", clickHandlerA4, false);
+	answer5.addEventListener("click", clickHandlerA5, false);
+	answer6.addEventListener("click", clickHandlerA6, false);
+	
+    function clickHandlerA1 () {
+        Question.style.display = "none";
+        answer1.style.display = "block";
+        answer2.style.display = "none";
+        answer3.style.display = "none";
+        answer4.style.display = "none";
+        answer5.style.display = "none";
+        answer6.style.display = "none";
+		personality1.style.display = "Block";
+		personality2.style.display = "none";
+		personality3.style.display = "none";
+		personality4.style.display = "none";
+		personality5.style.display = "none";
+		personality6.style.display = "none";
+    }
+    
+    function clickHandlerA2 () {
+        Question.style.display = "none";
+        answer1.style.display = "none";
+        answer2.style.display = "block";
+        answer3.style.display = "none";
+        answer4.style.display = "none";
+        answer5.style.display = "none";
+        answer6.style.display = "none";
+		personality1.style.display = "none";
+		personality2.style.display = "block";
+		personality3.style.display = "none";
+		personality4.style.display = "none";
+		personality5.style.display = "none";
+		personality6.style.display = "none";
+    }    
+    
+    function clickHandlerA3 () {
+        Question.style.display = "none";
+        answer1.style.display = "none";
+        answer2.style.display = "none";
+        answer3.style.display = "block";
+        answer4.style.display = "none";
+        answer5.style.display = "none";
+        answer6.style.display = "none";
+		personality1.style.display = "none";
+		personality2.style.display = "none";
+		personality3.style.display = "block";
+		personality4.style.display = "none";
+		personality5.style.display = "none";
+		personality6.style.display = "none";
+    }
+       
+    function clickHandlerA4 () {
+        Question.style.display = "none";
+        answer1.style.display = "none";
+        answer2.style.display = "none";
+        answer3.style.display = "none";
+        answer4.style.display = "block";
+        answer5.style.display = "none";
+        answer6.style.display = "none";
+		personality1.style.display = "none";
+		personality2.style.display = "none";
+		personality3.style.display = "none";
+		personality4.style.display = "block";
+		personality5.style.display = "none";
+		personality6.style.display = "none";
+    }
+    
+    function clickHandlerA5 () {
+        Question.style.display = "none";
+        answer1.style.display = "none";
+        answer2.style.display = "none";
+        answer3.style.display = "none";
+        answer4.style.display = "none";
+        answer5.style.display = "block";
+        answer6.style.display = "none";
+		personality1.style.display = "none";
+		personality2.style.display = "none";
+		personality3.style.display = "none";
+		personality4.style.display = "none";
+		personality5.style.display = "block";
+		personality6.style.display = "none";
+    }
+        
+    function clickHandlerA6 () {
+        Question.style.display = "none";
+        answer1.style.display = "none";
+        answer2.style.display = "none";
+        answer3.style.display = "none";
+        answer4.style.display = "none";
+        answer5.style.display = "none";
+        answer6.style.display = "block";
+		personality1.style.display = "none";
+		personality2.style.display = "none";
+		personality3.style.display = "none";
+		personality4.style.display = "none";
+		personality5.style.display = "none";
+		personality6.style.display = "block";
+    } 
+           
+        </script> 
+</html>
